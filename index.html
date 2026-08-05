@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GYMEE Corporativo — Garrafas Térmicas Personalizadas para Empresas</title>
+  <meta name="description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Academias, eventos wellness e brindes corporativos.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50:'#f4f7f4', 100:'#e4ece5', 200:'#c9d9cb', 300:'#a3bfa8',
+              400:'#7aa182', 500:'#588566', 600:'#446b52', 700:'#385643',
+              800:'#2f4638', 900:'#283a30', 950:'#141f19'
+            },
+            sand: {
+              50:'#faf8f4', 100:'#f3efe6', 200:'#e6ddcc', 300:'#d5c6ab',
+              400:'#c2ab87', 500:'#b4966d'
+            },
+            ink: '#161a17'
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"','system-ui','sans-serif'],
+            body: ['"Inter"','system-ui','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-font-smoothing: antialiased; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .logo-white { filter: invert(1) brightness(2); }
+  </style>
+</head>
+<body class="font-body text-ink bg-sand-50">
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-sand-50/80 backdrop-blur-md border-b border-sage-100">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo.png" alt="GYMEE" class="h-6 md:h-7 w-auto">
+        <span class="hidden sm:inline-block text-[10px] font-semibold tracking-[0.22em] uppercase text-sage-600 border-l border-sage-200 pl-2 ml-1" data-i18n="nav.tag">Corporativo</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <a href="#servicos" class="hover:text-sage-600 transition" data-i18n="nav.services">Soluções</a>
+        <a href="#produtos" class="hover:text-sage-600 transition" data-i18n="nav.products">Produtos</a>
+        <a href="#depoimentos" class="hover:text-sage-600 transition" data-i18n="nav.reviews">Depoimentos</a>
+        <a href="#galeria" class="hover:text-sage-600 transition" data-i18n="nav.gallery">Galeria</a>
+      </div>
+      <div class="flex items-center gap-2 md:gap-3">
+        <button id="langToggle" class="text-xs font-bold tracking-wide border border-sage-300 text-sage-700 rounded-full px-3 py-1.5 hover:bg-sage-100 transition" aria-label="Switch language">EN</button>
+        <a href="#contato" class="hidden sm:inline-flex items-center gap-2 bg-sage-600 hover:bg-sage-700 text-white text-sm font-semibold rounded-full px-5 py-2.5 transition shadow-sm shadow-sage-600/20" data-i18n="nav.cta">Pedir orçamento</a>
+        <button id="menuBtn" class="lg:hidden p-2 -mr-2 text-ink" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden bg-sand-50 border-t border-sage-100 px-5 py-4 space-y-1">
+      <a href="#servicos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.services">Soluções</a>
+      <a href="#produtos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.products">Produtos</a>
+      <a href="#depoimentos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.reviews">Depoimentos</a>
+      <a href="#galeria" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.gallery">Galeria</a>
+      <a href="#contato" class="mt-2 inline-flex bg-sage-600 text-white font-semibold rounded-full px-5 py-2.5" data-i18n="nav.cta">Pedir orçamento</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="assets/main-picture.jpg" alt="" class="w-full h-full object-cover object-[50%_18%]">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-5 lg:px-8 w-full">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-2 text-sage-200 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide uppercase mb-6" data-i18n="hero.badge">Hidratação premium para o seu negócio</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight" data-i18n="hero.title">Sua marca em cada gole.</h1>
+        <p class="mt-5 text-base sm:text-lg text-white/85 leading-relaxed max-w-xl" data-i18n="hero.subtitle">Garrafas térmicas premium personalizadas com a logo da sua empresa. A escolha das academias, eventos wellness e marcas que valorizam bem-estar.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#contato" class="inline-flex justify-center items-center gap-2 bg-sage-500 hover:bg-sage-600 text-white font-semibold rounded-full px-7 py-3.5 transition shadow-lg shadow-sage-900/30" data-i18n="hero.cta1">Solicitar orçamento</a>
+          <a href="#produtos" class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-semibold rounded-full px-7 py-3.5 transition" data-i18n="hero.cta2">Ver produtos</a>
+        </div>
+        <div class="mt-10 grid grid-cols-3 gap-4 max-w-md text-white">
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-extrabold">24h</p>
+            <p class="text-xs sm:text-sm text-white/70 mt-1" data-i18n="hero.stat1">gelado por até</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-extrabold">100%</p>
+            <p class="text-xs sm:text-sm text-white/70 mt-1" data-i18n="hero.stat2">aço inox premium</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-extrabold">50+</p>
+            <p class="text-xs sm:text-sm text-white/70 mt-1" data-i18n="hero.stat3">empresas atendidas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="bg-sage-900 text-sage-100">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 flex flex-wrap justify-center lg:justify-between items-center gap-x-10 gap-y-2 text-xs sm:text-sm font-medium tracking-wide">
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.1">Gravação a laser da sua logo</span></span>
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.2">Pedidos a partir de 30 unidades</span></span>
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.3">Entrega para todo o Brasil</span></span>
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.4">Condições especiais B2B</span></span>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="servicos" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center reveal">
+        <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="services.kicker">Soluções B2B</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="services.title">Feito para o seu negócio</h2>
+        <p class="mt-4 text-ink/60 text-base sm:text-lg leading-relaxed" data-i18n="services.subtitle">Da academia ao escritório, transformamos hidratação em experiência de marca.</p>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <!-- card 1 -->
+        <div class="reveal group bg-white rounded-3xl p-8 border border-sage-100 hover:border-sage-300 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center group-hover:bg-sage-600 group-hover:text-white transition-colors duration-300">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.5 6.5v11m11-11v11M3 9.5v5m18-5v5M6.5 12h11"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mt-6" data-i18n="services.c1.title">Academias & Studios</h3>
+          <p class="mt-3 text-ink/60 leading-relaxed text-[15px]" data-i18n="services.c1.text">Garrafas com a identidade da sua academia para revenda, planos premium ou kit de boas-vindas de novos alunos. Fortaleça a comunidade e gere receita extra.</p>
+        </div>
+        <!-- card 2 -->
+        <div class="reveal group bg-white rounded-3xl p-8 border border-sage-100 hover:border-sage-300 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300" style="transition-delay:.08s">
+          <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center group-hover:bg-sage-600 group-hover:text-white transition-colors duration-300">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m5.66.34l-1.41 1.41M21 12h-2M5 12H3m3.34-5.66l1.41 1.41M12 8a4 4 0 100 8 4 4 0 000-8zM7 21h10M9 18l-1 3m7-3l1 3"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mt-6" data-i18n="services.c2.title">Eventos Wellness</h3>
+          <p class="mt-3 text-ink/60 leading-relaxed text-[15px]" data-i18n="services.c2.text">Corridas, retiros, festivais de yoga e ativações de marca. Um brinde útil e sustentável que os participantes usam por anos — com a sua marca sempre à vista.</p>
+        </div>
+        <!-- card 3 -->
+        <div class="reveal group bg-white rounded-3xl p-8 border border-sage-100 hover:border-sage-300 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300" style="transition-delay:.16s">
+          <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center group-hover:bg-sage-600 group-hover:text-white transition-colors duration-300">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-7.5M12 21V11.5M3.5 7h17a1.5 1.5 0 010 3h-17a1.5 1.5 0 010-3zM12 7c-2.5 0-4-1.5-4-3 0-1 .8-1.5 1.7-1.5C11.2 2.5 12 4.5 12 7zm0 0c2.5 0 4-1.5 4-3 0-1-.8-1.5-1.7-1.5C12.8 2.5 12 4.5 12 7z"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mt-6" data-i18n="services.c3.title">Brindes Corporativos</h3>
+          <p class="mt-3 text-ink/60 leading-relaxed text-[15px]" data-i18n="services.c3.text">Presenteie clientes e colaboradores com um brinde premium que comunica cuidado e bem-estar. Gravação a laser da sua logo com acabamento impecável.</p>
+        </div>
+      </div>
+
+      <!-- how it works -->
+      <div class="mt-16 reveal bg-sage-800 rounded-3xl p-8 lg:p-12 text-white grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-4 lg:col-span-1">
+          <h3 class="font-display text-2xl font-bold" data-i18n="services.how.title">Como funciona</h3>
+          <p class="text-sage-200 mt-2 text-sm leading-relaxed" data-i18n="services.how.subtitle">Simples, rápido e sem complicação.</p>
+        </div>
+        <div class="lg:col-span-3 grid sm:grid-cols-3 gap-6">
+          <div>
+            <span class="font-display text-sage-300 text-sm font-bold">01</span>
+            <h4 class="font-semibold mt-1" data-i18n="services.how.s1">Escolha o modelo</h4>
+            <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed" data-i18n="services.how.s1t">Selecione entre os modelos GYMEE e as cores da sua marca.</p>
+          </div>
+          <div>
+            <span class="font-display text-sage-300 text-sm font-bold">02</span>
+            <h4 class="font-semibold mt-1" data-i18n="services.how.s2">Aprove a arte</h4>
+            <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed" data-i18n="services.how.s2t">Enviamos o mockup com sua logo gravada para aprovação.</p>
+          </div>
+          <div>
+            <span class="font-display text-sage-300 text-sm font-bold">03</span>
+            <h4 class="font-semibold mt-1" data-i18n="services.how.s3">Receba e encante</h4>
+            <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed" data-i18n="services.how.s3t">Produção e entrega para todo o Brasil com prazo combinado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="produtos" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center reveal">
+        <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="products.kicker">Linha GYMEE</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="products.title">Um modelo para cada momento</h2>
+        <p class="mt-4 text-ink/60 text-base sm:text-lg leading-relaxed" data-i18n="products.subtitle">Todos personalizáveis com a logo da sua empresa.</p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- PRO -->
+        <div class="reveal group bg-sand-50 rounded-3xl overflow-hidden border border-sage-100 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300 flex flex-col">
+          <div class="aspect-[4/5] bg-white flex items-center justify-center overflow-hidden">
+            <img id="proImg" src="assets/pro-preto.jpg" alt="GYMEE Pro" class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-lg font-bold">GYMEE Pro</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-sage-600 text-white rounded-full px-2 py-0.5" data-i18n="products.badge">Best-seller</span>
+            </div>
+            <p class="text-sage-600 text-xs font-semibold uppercase tracking-wide mt-1" data-i18n="products.pro.tag">Para a correria do dia a dia</p>
+            <div class="mt-4 flex items-center gap-2.5" id="proSwatches" aria-label="Cores disponíveis">
+              <button data-img="assets/pro-preto.jpg" title="Preto" class="pro-swatch w-5 h-5 rounded-full border-2 border-sage-600 ring-2 ring-sage-600/25 transition-transform hover:scale-110" style="background:#1c1c1e"></button>
+              <button data-img="assets/pro-royal.jpg" title="Azul Royal" class="pro-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#2547b8"></button>
+              <button data-img="assets/pro-sky.jpg" title="Azul Sky" class="pro-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#1f9cd9"></button>
+              <button data-img="assets/pro-amarelo.jpg" title="Amarelo" class="pro-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f3c520"></button>
+              <button data-img="assets/pro-rosa.jpg" title="Rosa" class="pro-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#ef93b2"></button>
+              <button data-img="assets/pro-coral.jpg" title="Coral" class="pro-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f27a67"></button>
+              <span class="text-[11px] text-ink/40 font-medium ml-1" data-i18n="products.pro.colors">6 cores</span>
+            </div>
+            <p class="mt-3 text-ink/60 text-sm leading-relaxed flex-1" data-i18n="products.pro.text">Tampa com canudo embutido e abertura rápida: hidratação fácil sem inclinar a garrafa. Ideal para treino, trabalho, trilha ou no carro.</p>
+            <a href="#contato" class="mt-5 inline-flex items-center gap-1.5 text-sage-700 font-semibold text-sm hover:gap-2.5 transition-all" data-i18n="products.cta">Pedir orçamento <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <!-- COZY 1200ML -->
+        <div class="reveal group bg-sand-50 rounded-3xl overflow-hidden border border-sage-100 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300 flex flex-col" style="transition-delay:.07s">
+          <div class="aspect-[4/5] bg-white flex items-center justify-center overflow-hidden">
+            <img id="cozy1200Img" src="assets/cozy1200-purple.jpg" alt="GYMEE Cozy 1200ml" class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-lg font-bold">GYMEE Cozy</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-sage-100 text-sage-700 rounded-full px-2 py-0.5">1200ml</span>
+            </div>
+            <p class="text-sage-600 text-xs font-semibold uppercase tracking-wide mt-1" data-i18n="products.cozy.tag">Conforto e praticidade</p>
+            <div class="mt-4 flex items-center gap-2.5" id="cozy1200Swatches" aria-label="Cores disponíveis">
+              <button data-img="assets/cozy1200-purple.jpg" title="Roxo" class="cozy1200-swatch w-5 h-5 rounded-full border-2 border-sage-600 ring-2 ring-sage-600/25 transition-transform hover:scale-110" style="background:#b9a0d4"></button>
+              <button data-img="assets/cozy1200-lightblue.jpg" title="Azul Claro" class="cozy1200-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#8ecae6"></button>
+              <button data-img="assets/cozy1200-salmon.jpg" title="Salmão" class="cozy1200-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f4978e"></button>
+              <span class="text-[11px] text-ink/40 font-medium ml-1">3 cores</span>
+            </div>
+            <p class="mt-3 text-ink/60 text-sm leading-relaxed flex-1" data-i18n="products.cozy.text">Aço inoxidável com canudo flexível: a escolha ideal para o dia a dia no trabalho ou momentos tranquilos em casa. Design que une funcionalidade e máxima praticidade.</p>
+            <a href="#contato" class="mt-5 inline-flex items-center gap-1.5 text-sage-700 font-semibold text-sm hover:gap-2.5 transition-all" data-i18n="products.cta">Pedir orçamento <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <!-- COZY 880ML -->
+        <div class="reveal group bg-sand-50 rounded-3xl overflow-hidden border border-sage-100 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300 flex flex-col" style="transition-delay:.14s">
+          <div class="aspect-[4/5] bg-white flex items-center justify-center overflow-hidden">
+            <img id="cozy880Img" src="assets/cozy880-white.jpg" alt="GYMEE Cozy 880ml" class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-lg font-bold">GYMEE Cozy</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-sage-100 text-sage-700 rounded-full px-2 py-0.5">880ml</span>
+            </div>
+            <p class="text-sage-600 text-xs font-semibold uppercase tracking-wide mt-1" data-i18n="products.cozy.tag">Conforto e praticidade</p>
+            <div class="mt-4 flex items-center gap-2.5" id="cozy880Swatches" aria-label="Cores disponíveis">
+              <button data-img="assets/cozy880-white.jpg" title="Branco" class="cozy880-swatch w-5 h-5 rounded-full border-2 border-sage-600 ring-2 ring-sage-600/25 transition-transform hover:scale-110" style="background:#f2ede2"></button>
+              <button data-img="assets/cozy880-green.jpg" title="Verde" class="cozy880-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#1f4d3a"></button>
+              <button data-img="assets/cozy880-pink.jpg" title="Rosa" class="cozy880-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f6c9d3"></button>
+              <button data-img="assets/cozy880-black.jpg" title="Preto" class="cozy880-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#1c1c1e"></button>
+              <span class="text-[11px] text-ink/40 font-medium ml-1">4 cores</span>
+            </div>
+            <p class="mt-3 text-ink/60 text-sm leading-relaxed flex-1" data-i18n="products.cozy.text">Aço inoxidável com canudo flexível: a escolha ideal para o dia a dia no trabalho ou momentos tranquilos em casa. Design que une funcionalidade e máxima praticidade.</p>
+            <a href="#contato" class="mt-5 inline-flex items-center gap-1.5 text-sage-700 font-semibold text-sm hover:gap-2.5 transition-all" data-i18n="products.cta">Pedir orçamento <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <!-- KIDS -->
+        <div class="reveal group bg-sand-50 rounded-3xl overflow-hidden border border-sage-100 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300 flex flex-col" style="transition-delay:.21s">
+          <div class="aspect-[4/5] bg-white flex items-center justify-center overflow-hidden">
+            <img id="kidsImg" src="assets/kids-green.jpg" alt="GYMEE Kids" class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display text-lg font-bold">GYMEE Kids</h3>
+            <p class="text-sage-600 text-xs font-semibold uppercase tracking-wide mt-1" data-i18n="products.kids.tag">Feita para pequenos imparáveis</p>
+            <div class="mt-4 flex items-center gap-2.5" id="kidsSwatches" aria-label="Cores disponíveis">
+              <button data-img="assets/kids-green.jpg" title="Verde" class="kids-swatch w-5 h-5 rounded-full border-2 border-sage-600 ring-2 ring-sage-600/25 transition-transform hover:scale-110" style="background:#9ccb3b"></button>
+              <button data-img="assets/kids-lightblue.jpg" title="Azul Claro" class="kids-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#8ecae6"></button>
+              <button data-img="assets/kids-orange.jpg" title="Laranja" class="kids-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f5943a"></button>
+              <button data-img="assets/kids-pink.jpg" title="Rosa" class="kids-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#f48fb1"></button>
+              <button data-img="assets/kids-purple.jpg" title="Roxo" class="kids-swatch w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-black/10 transition-transform hover:scale-110" style="background:#b39ddb"></button>
+              <span class="text-[11px] text-ink/40 font-medium ml-1">5 cores</span>
+            </div>
+            <p class="mt-3 text-ink/60 text-sm leading-relaxed flex-1" data-i18n="products.kids.text">Resistência, segurança e design pensado para os pequenos aventureiros. Na escola, no passeio ou na brincadeira, aguenta o ritmo sem perder o estilo.</p>
+            <a href="#contato" class="mt-5 inline-flex items-center gap-1.5 text-sage-700 font-semibold text-sm hover:gap-2.5 transition-all" data-i18n="products.cta">Pedir orçamento <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <!-- MUG -->
+        <div class="reveal group bg-sand-50 rounded-3xl overflow-hidden border border-sage-100 hover:shadow-xl hover:shadow-sage-900/5 transition-all duration-300 flex flex-col" style="transition-delay:.28s">
+          <div class="aspect-[4/5] bg-white p-6 flex items-center justify-center overflow-hidden">
+            <img src="assets/mug.jpg" alt="GYMEE Mug" class="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display text-lg font-bold">GYMEE Mug</h3>
+            <p class="text-sage-600 text-xs font-semibold uppercase tracking-wide mt-1" data-i18n="products.mug.tag">A caneca que acompanha seu ritmo</p>
+            <p class="mt-3 text-ink/60 text-sm leading-relaxed flex-1" data-i18n="products.mug.text">Perfeita para o ar livre e ideal para o escritório. Café quente para começar o dia ou bebida gelada pós-treino — performance em qualquer cenário.</p>
+            <a href="#contato" class="mt-5 inline-flex items-center gap-1.5 text-sage-700 font-semibold text-sm hover:gap-2.5 transition-all" data-i18n="products.cta">Pedir orçamento <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="reveal mt-10 text-center text-sm text-ink/50" data-i18n="products.note">✦ Cores e capacidades sob consulta. Pedido mínimo de 30 unidades por modelo.</p>
+    </div>
+  </section>
+
+  <!-- ============ GYMEE PRO — ACADEMIAS ============ -->
+  <section class="py-20 lg:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="reveal relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+            <img src="assets/pro-model2.jpg" alt="Modelo em academia segurando garrafa GYMEE Pro" class="w-full h-full object-cover object-[50%_20%]" loading="lazy">
+          </div>
+          <div class="hidden sm:block absolute -bottom-8 -right-6 w-40 md:w-52 aspect-[4/5] rounded-2xl overflow-hidden border-4 border-white shadow-xl">
+            <img src="assets/pro-model1.jpg" alt="Modelo na bicicleta ergométrica com garrafa GYMEE Pro" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+        <div class="reveal mt-8 sm:mt-0" style="transition-delay:.1s">
+          <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="pro.feature.kicker">Para academias & studios</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="pro.feature.title">Feita para o ritmo da academia</h2>
+          <p class="mt-4 text-ink/60 text-base sm:text-lg leading-relaxed" data-i18n="pro.feature.text">A GYMEE Pro acompanha o aluno do aquecimento ao último treino. Tampa com canudo embutido e abertura rápida — hidratação sem pausar a série.</p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="pro.feature.b1">Ideal para revenda na recepção ou kit de boas-vindas de novos alunos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="pro.feature.b2">Gravação a laser com a marca da sua academia ou studio</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="pro.feature.b3">6 cores para combinar com a identidade visual da sua marca</span>
+            </li>
+          </ul>
+          <a href="#contato" class="mt-8 inline-flex items-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold rounded-full px-7 py-3.5 transition shadow-lg shadow-sage-900/20" data-i18n="pro.feature.cta">Quero para minha academia <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GYMEE COZY — WELLNESS & EVENTOS ============ -->
+  <section class="py-20 lg:py-28 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="reveal order-2 lg:order-1" style="transition-delay:.1s">
+          <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="cozy.feature.kicker">Para wellness & eventos</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="cozy.feature.title">Feita para os momentos de calma e celebração</h2>
+          <p class="mt-4 text-ink/60 text-base sm:text-lg leading-relaxed" data-i18n="cozy.feature.text">Retiros de yoga, corridas, festivais wellness ou um brinde de fim de ano: a GYMEE Cozy transforma hidratação em experiência de marca em qualquer ocasião.</p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="cozy.feature.b1">Canudo flexível e alça reforçada — perfeita para o dia a dia fora de casa</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="cozy.feature.b2">Presente premium para retiros, spas e ativações de marca</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-ink/70 text-[15px]" data-i18n="cozy.feature.b3">Disponível em 1200ml e 880ml para todo tipo de rotina</span>
+            </li>
+          </ul>
+          <a href="#contato" class="mt-8 inline-flex items-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold rounded-full px-7 py-3.5 transition shadow-lg shadow-sage-900/20" data-i18n="cozy.feature.cta">Quero para meu evento <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="reveal relative order-1 lg:order-2">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+            <img src="assets/cozy-model1.jpg" alt="Modelo em ambiente de wellness com garrafa GYMEE Cozy verde" class="w-full h-full object-cover object-[50%_25%]" loading="lazy">
+          </div>
+          <div class="hidden sm:block absolute -bottom-8 -left-6 w-40 md:w-52 aspect-[4/5] rounded-2xl overflow-hidden border-4 border-white shadow-xl">
+            <img src="assets/cozy-model2.jpg" alt="Modelo com garrafa GYMEE Cozy preta em jardim" class="w-full h-full object-cover object-[50%_25%]" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="depoimentos" class="py-20 lg:py-28 bg-sage-950 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center reveal">
+        <span class="text-sage-300 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="reviews.kicker">Depoimentos</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="reviews.title">Quem já veste a marca GYMEE</h2>
+      </div>
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <figure class="reveal bg-sage-900/60 border border-sage-800 rounded-3xl p-8">
+          <div class="flex gap-1 text-sand-400" aria-label="5 estrelas">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>
+          </div>
+          <blockquote class="mt-5 text-sage-100 leading-relaxed text-[15px]" data-i18n="reviews.r1.text">"Fizemos 200 garrafas com a nossa logo para o kit de matrícula. Os alunos amaram — virou item de desejo na academia e fortaleceu demais a nossa marca."</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-sage-600 flex items-center justify-center font-display font-bold text-sm">RC</span>
+            <div>
+              <p class="font-semibold text-sm">Rafael C.</p>
+              <p class="text-sage-300/70 text-xs" data-i18n="reviews.r1.role">Dono de academia · São Paulo</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="reveal bg-sage-900/60 border border-sage-800 rounded-3xl p-8" style="transition-delay:.08s">
+          <div class="flex gap-1 text-sand-400" aria-label="5 estrelas">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>
+          </div>
+          <blockquote class="mt-5 text-sage-100 leading-relaxed text-[15px]" data-i18n="reviews.r2.text">"Usamos as GYMEE como brinde no nosso retiro de yoga. Qualidade impecável, entrega no prazo e um atendimento que resolveu tudo pelo WhatsApp."</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-sage-600 flex items-center justify-center font-display font-bold text-sm">MF</span>
+            <div>
+              <p class="font-semibold text-sm">Mariana F.</p>
+              <p class="text-sage-300/70 text-xs" data-i18n="reviews.r2.role">Produtora de eventos wellness · Rio de Janeiro</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="reveal bg-sage-900/60 border border-sage-800 rounded-3xl p-8" style="transition-delay:.16s">
+          <div class="flex gap-1 text-sand-400" aria-label="5 estrelas">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8l-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>
+          </div>
+          <blockquote class="mt-5 text-sage-100 leading-relaxed text-[15px]" data-i18n="reviews.r3.text">"Presenteamos nossos clientes no fim de ano com a GYMEE Mug personalizada. O acabamento da gravação surpreendeu — parece produto de marca internacional."</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-sage-600 flex items-center justify-center font-display font-bold text-sm">LA</span>
+            <div>
+              <p class="font-semibold text-sm">Luciana A.</p>
+              <p class="text-sage-300/70 text-xs" data-i18n="reviews.r3.role">Gerente de marketing · Curitiba</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="galeria" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center reveal">
+        <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="gallery.kicker">Galeria</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="gallery.title">GYMEE em movimento</h2>
+        <p class="mt-4 text-ink/60 text-base sm:text-lg" data-i18n="gallery.subtitle">Do escritório à beira da piscina — estilo de vida em cada detalhe.</p>
+      </div>
+      <div class="mt-14 grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+        <div class="reveal rounded-3xl overflow-hidden group row-span-2"><img src="assets/main-picture.jpg" alt="Amigas brindando com garrafas GYMEE na piscina" class="w-full h-full object-cover object-[50%_25%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+        <div class="reveal rounded-3xl overflow-hidden group"><img src="assets/cozy-model2.jpg" alt="GYMEE Cozy em ambiente de wellness" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+        <div class="reveal rounded-3xl overflow-hidden group"><img src="assets/pro-model3.jpg" alt="GYMEE Pro ao ar livre" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+        <div class="reveal rounded-3xl overflow-hidden group"><img src="assets/gal-toast.jpg" alt="Brinde com garrafas GYMEE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+        <div class="reveal rounded-3xl overflow-hidden group"><img src="assets/pro-mainpicture.jpg" alt="Cores GYMEE Pro personalizadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+        <div class="reveal rounded-3xl overflow-hidden group lg:col-span-1 col-span-2"><img src="assets/pro-model1.jpg" alt="GYMEE Pro na academia" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contato" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div class="reveal">
+          <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase" data-i18n="contact.kicker">Contato</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-3" data-i18n="contact.title">Vamos colocar sua marca em movimento?</h2>
+          <p class="mt-4 text-ink/60 text-base sm:text-lg leading-relaxed" data-i18n="contact.subtitle">Conte quantas unidades você precisa e receba um orçamento personalizado em até 24h úteis.</p>
+
+          <div class="mt-8 space-y-4">
+            <a href="https://wa.me/5551995252314?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20garrafas%20GYMEE%20personalizadas." target="_blank" rel="noopener" class="flex items-center gap-4 bg-sage-50 hover:bg-sage-100 border border-sage-100 rounded-2xl p-5 transition group">
+              <span class="w-12 h-12 rounded-xl bg-sage-600 text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.7 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7a9 9 0 003.5 3.1c.5.2.9.3 1.2.4.5.2 1 .1 1.3.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"/></svg>
+              </span>
+              <div>
+                <p class="font-display font-bold" >WhatsApp</p>
+                <p class="text-ink/60 text-sm" data-i18n="contact.wa">Resposta rápida em horário comercial</p>
+              </div>
+            </a>
+            <a href="mailto:contato@gymee.com.br" class="flex items-center gap-4 bg-sage-50 hover:bg-sage-100 border border-sage-100 rounded-2xl p-5 transition">
+              <span class="w-12 h-12 rounded-xl bg-sage-600 text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/></svg>
+              </span>
+              <div>
+                <p class="font-display font-bold">E-mail</p>
+                <p class="text-ink/60 text-sm">contato@gymee.com.br</p>
+              </div>
+            </a>
+            <a href="https://instagram.com/gymeebr" target="_blank" rel="noopener" class="flex items-center gap-4 bg-sage-50 hover:bg-sage-100 border border-sage-100 rounded-2xl p-5 transition">
+              <span class="w-12 h-12 rounded-xl bg-sage-600 text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.2A9.8 9.8 0 002.2 12c0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 3a2.9 2.9 0 110 5.8 2.9 2.9 0 010-5.8zm5.8 6.8a5.8 5.8 0 01-11.6 0h2a3.8 3.8 0 007.6 0h2z" opacity="0"/><path d="M7.8 2h8.4A5.8 5.8 0 0122 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8A5.8 5.8 0 012 16.2V7.8A5.8 5.8 0 017.8 2zm0 2A3.8 3.8 0 004 7.8v8.4A3.8 3.8 0 007.8 20h8.4a3.8 3.8 0 003.8-3.8V7.8A3.8 3.8 0 0016.2 4H7.8zM12 7.2a4.8 4.8 0 110 9.6 4.8 4.8 0 010-9.6zm0 2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm5-3.4a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/></svg>
+              </span>
+              <div>
+                <p class="font-display font-bold">Instagram</p>
+                <p class="text-ink/60 text-sm">@gymeebr</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- form -->
+        <form id="quoteForm" class="reveal bg-sand-50 border border-sage-100 rounded-3xl p-6 sm:p-8 space-y-5" style="transition-delay:.1s">
+          <h3 class="font-display text-xl font-bold" data-i18n="contact.form.title">Solicite seu orçamento</h3>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="f-name" data-i18n="contact.form.name">Nome</label>
+              <input id="f-name" required type="text" class="w-full rounded-xl border border-sage-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500" data-i18n-ph="contact.form.nameph" placeholder="Seu nome">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="f-company" data-i18n="contact.form.company">Empresa</label>
+              <input id="f-company" required type="text" class="w-full rounded-xl border border-sage-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500" data-i18n-ph="contact.form.companyph" placeholder="Nome da empresa">
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="f-email">E-mail</label>
+              <input id="f-email" required type="email" class="w-full rounded-xl border border-sage-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500" placeholder="voce@empresa.com">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="f-qty" data-i18n="contact.form.qty">Quantidade estimada</label>
+              <select id="f-qty" class="w-full rounded-xl border border-sage-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500">
+                <option>10 – 30</option>
+                <option>30 – 50</option>
+                <option>50 – 100</option>
+                <option>100 – 200</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="f-msg" data-i18n="contact.form.msg">Mensagem</label>
+            <textarea id="f-msg" rows="4" class="w-full rounded-xl border border-sage-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 resize-none" data-i18n-ph="contact.form.msgph" placeholder="Conte sobre seu projeto: modelo desejado, cores, evento..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-semibold rounded-full py-3.5 transition shadow-lg shadow-sage-600/20" data-i18n="contact.form.send">Enviar pedido de orçamento</button>
+          <p id="formOk" class="hidden text-center text-sage-700 font-semibold text-sm" data-i18n="contact.form.ok">✓ Abrimos o WhatsApp com seu pedido — é só enviar a mensagem!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ink text-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="GYMEE" class="h-6 w-auto logo-white">
+        <span class="text-white/40 text-sm" data-i18n="footer.tag">· Hidratação premium para empresas</span>
+      </div>
+      <p class="text-white/40 text-xs" data-i18n="footer.copy">© 2026 GYMEE. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- floating whatsapp -->
+  <a href="https://wa.me/5551995252314?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20garrafas%20GYMEE%20personalizadas." target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-sage-600 hover:bg-sage-700 text-white flex items-center justify-center shadow-xl shadow-sage-900/30 transition hover:scale-105">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.7 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7a9 9 0 003.5 3.1c.5.2.9.3 1.2.4.5.2 1 .1 1.3.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"/></svg>
+  </a>
+
+  <script>
+    // ===== i18n =====
+    const i18n = {
+      en: {
+        'nav.tag':'Corporate', 'nav.services':'Solutions', 'nav.products':'Products', 'nav.reviews':'Reviews', 'nav.gallery':'Gallery', 'nav.cta':'Get a quote',
+        'hero.badge':'Premium hydration for your business',
+        'hero.title':'Your brand in every sip.',
+        'hero.subtitle':'Premium insulated bottles customized with your company logo. The choice of gyms, wellness events and brands that value well-being.',
+        'hero.cta1':'Request a quote', 'hero.cta2':'View products',
+        'hero.stat1':'cold for up to', 'hero.stat2':'premium stainless steel', 'hero.stat3':'companies served',
+        'trust.1':'Laser engraving of your logo', 'trust.2':'Orders from 30 units', 'trust.3':'Delivery across Brazil', 'trust.4':'Special B2B conditions',
+        'services.kicker':'B2B Solutions', 'services.title':'Made for your business',
+        'services.subtitle':'From the gym to the office, we turn hydration into a brand experience.',
+        'services.c1.title':'Gyms & Studios',
+        'services.c1.text':'Bottles with your gym\'s identity for resale, premium plans or welcome kits for new members. Strengthen your community and create extra revenue.',
+        'services.c2.title':'Wellness Events',
+        'services.c2.text':'Races, retreats, yoga festivals and brand activations. A useful, sustainable gift attendees will use for years — with your brand always in sight.',
+        'services.c3.title':'Corporate Gifts',
+        'services.c3.text':'Treat clients and employees to a premium gift that communicates care and well-being. Laser engraving of your logo with a flawless finish.',
+        'services.how.title':'How it works', 'services.how.subtitle':'Simple, fast, hassle-free.',
+        'services.how.s1':'Choose the model', 'services.how.s1t':'Pick from the GYMEE range and your brand colors.',
+        'services.how.s2':'Approve the artwork', 'services.how.s2t':'We send a mockup with your engraved logo for approval.',
+        'services.how.s3':'Receive and delight', 'services.how.s3t':'Production and delivery across Brazil on the agreed date.',
+        'products.kicker':'GYMEE Range', 'products.title':'A model for every moment',
+        'products.subtitle':'All customizable with your company logo.',
+        'products.badge':'Best-seller',
+        'products.pro.tag':'For the daily hustle',
+        'products.pro.colors':'6 colors',
+        'products.pro.text':'Lid with built-in straw and quick opening: easy hydration without tilting the bottle. Perfect for workouts, work, trails or the car.',
+        'products.cozy.tag':'Comfort and practicality',
+        'products.cozy.text':'Stainless steel with a flexible straw: the ideal choice for the workday or quiet moments at home. Design that blends function and maximum practicality.',
+        'products.kids.tag':'Made for unstoppable kids',
+        'products.kids.text':'Durability, safety and a design made for little adventurers. At school, on trips or at playtime, it keeps up without losing style.',
+        'products.mug.tag':'The mug that keeps your pace',
+        'products.mug.text':'Perfect outdoors and ideal at the office. Hot coffee to start the day or an ice-cold post-workout drink — performance in any scenario.',
+        'products.cta':'Get a quote →',
+        'products.note':'✦ Colors and sizes on request. Minimum order of 30 units per model.',
+        'pro.feature.kicker':'For gyms & studios',
+        'pro.feature.title':'Made for the pace of the gym',
+        'pro.feature.text':'GYMEE Pro keeps up from warm-up to the last set. Lid with built-in straw and quick opening — hydration without pausing the workout.',
+        'pro.feature.b1':'Perfect for resale at the front desk or new-member welcome kits',
+        'pro.feature.b2':'Laser engraving with your gym or studio\'s brand',
+        'pro.feature.b3':'6 colors to match your brand identity',
+        'pro.feature.cta':'I want it for my gym →',
+        'cozy.feature.kicker':'For wellness & events',
+        'cozy.feature.title':'Made for moments of calm and celebration',
+        'cozy.feature.text':'Yoga retreats, races, wellness festivals or a year-end gift: GYMEE Cozy turns hydration into a brand experience on any occasion.',
+        'cozy.feature.b1':'Flexible straw and reinforced handle — perfect for life on the go',
+        'cozy.feature.b2':'A premium gift for retreats, spas and brand activations',
+        'cozy.feature.b3':'Available in 1200ml and 880ml for every routine',
+        'cozy.feature.cta':'I want it for my event →',
+        'reviews.kicker':'Reviews', 'reviews.title':'Brands already wearing GYMEE',
+        'reviews.r1.text':'"We ordered 200 bottles with our logo for the enrollment kit. Members loved it — it became a coveted item at the gym and boosted our brand."',
+        'reviews.r1.role':'Gym owner · São Paulo',
+        'reviews.r2.text':'"We used GYMEE bottles as gifts at our yoga retreat. Impeccable quality, on-time delivery and support that solved everything over WhatsApp."',
+        'reviews.r2.role':'Wellness event producer · Rio de Janeiro',
+        'reviews.r3.text':'"We gifted our clients the customized GYMEE Mug at year-end. The engraving finish amazed us — it looks like an international brand product."',
+        'reviews.r3.role':'Marketing manager · Curitiba',
+        'gallery.kicker':'Gallery', 'gallery.title':'GYMEE in motion',
+        'gallery.subtitle':'From the office to the poolside — lifestyle in every detail.',
+        'contact.kicker':'Contact', 'contact.title':'Ready to put your brand in motion?',
+        'contact.subtitle':'Tell us how many units you need and get a custom quote within 24 business hours.',
+        'contact.wa':'Fast reply during business hours',
+        'contact.form.title':'Request your quote',
+        'contact.form.name':'Name', 'contact.form.nameph':'Your name',
+        'contact.form.company':'Company', 'contact.form.companyph':'Company name',
+        'contact.form.qty':'Estimated quantity',
+        'contact.form.msg':'Message', 'contact.form.msgph':'Tell us about your project: model, colors, event...',
+        'contact.form.send':'Send quote request',
+        'contact.form.ok':'✓ WhatsApp opened with your request — just hit send!',
+        'footer.tag':'· Premium hydration for business',
+        'footer.copy':'© 2026 GYMEE. All rights reserved.'
+      },
+      pt: {} // filled from DOM on load
+    };
+
+    // capture PT defaults from the DOM
+    document.querySelectorAll('[data-i18n]').forEach(el => { i18n.pt[el.dataset.i18n] = el.innerHTML; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => { i18n.pt[el.dataset.i18nPh] = el.placeholder; });
+
+    let lang = 'pt';
+    const langToggle = document.getElementById('langToggle');
+    langToggle.addEventListener('click', () => {
+      lang = lang === 'pt' ? 'en' : 'pt';
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      langToggle.textContent = lang === 'pt' ? 'EN' : 'PT';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const t = i18n[lang][el.dataset.i18n];
+        if (t !== undefined) el.innerHTML = t;
+      });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const t = i18n[lang][el.dataset.i18nPh];
+        if (t !== undefined) el.placeholder = t;
+      });
+    });
+
+    // ===== mobile menu =====
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // ===== scroll reveal =====
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ===== color swatches (GYMEE Pro, GYMEE Cozy 880ml) =====
+    function initSwatches(imgEl, swatchSelector) {
+      const swatches = document.querySelectorAll(swatchSelector);
+      swatches.forEach(btn => {
+        btn.addEventListener('click', () => {
+          swatches.forEach(b => b.classList.remove('border-sage-600', 'ring-2', 'ring-sage-600/25'));
+          swatches.forEach(b => b.classList.add('border-white', 'shadow-sm', 'ring-1', 'ring-black/10'));
+          btn.classList.remove('border-white', 'shadow-sm', 'ring-1', 'ring-black/10');
+          btn.classList.add('border-sage-600', 'ring-2', 'ring-sage-600/25');
+          imgEl.style.opacity = '0';
+          setTimeout(() => {
+            imgEl.src = btn.dataset.img;
+            imgEl.onload = () => { imgEl.style.opacity = '1'; };
+          }, 200);
+        });
+      });
+    }
+    initSwatches(document.getElementById('proImg'), '.pro-swatch');
+    initSwatches(document.getElementById('cozy1200Img'), '.cozy1200-swatch');
+    initSwatches(document.getElementById('cozy880Img'), '.cozy880-swatch');
+    initSwatches(document.getElementById('kidsImg'), '.kids-swatch');
+
+    // ===== form -> WhatsApp =====
+    document.getElementById('quoteForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('f-name').value.trim();
+      const company = document.getElementById('f-company').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      const qty = document.getElementById('f-qty').value;
+      const msg = document.getElementById('f-msg').value.trim();
+      const lines = lang === 'en' ? {
+        intro: 'Hello! I would like a quote for customized GYMEE bottles.',
+        name: 'Name', company: 'Company', email: 'Email', qty: 'Estimated quantity', msg: 'Message'
+      } : {
+        intro: 'Olá! Gostaria de um orçamento de garrafas GYMEE personalizadas.',
+        name: 'Nome', company: 'Empresa', email: 'E-mail', qty: 'Quantidade estimada', msg: 'Mensagem'
+      };
+      let text = lines.intro +
+        `\n\n${lines.name}: ${name}` +
+        `\n${lines.company}: ${company}` +
+        `\n${lines.email}: ${email}` +
+        `\n${lines.qty}: ${qty}`;
+      if (msg) text += `\n${lines.msg}: ${msg}`;
+      window.open('https://wa.me/5551995252314?text=' + encodeURIComponent(text), '_blank');
+      document.getElementById('formOk').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
