@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GYMEE Corporativo — Garrafas Térmicas Personalizadas para Empresas</title>
-  <meta name="description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Academias, eventos wellness e brindes corporativos.">
+  <meta name="description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Mais de 50 marcas — academias, estúdios e eventos wellness — já confiam na GYMEE.">
   <link rel="canonical" href="https://gymee.com.br/">
   <link rel="alternate" hreflang="pt-BR" href="https://gymee.com.br/">
   <link rel="alternate" hreflang="en" href="https://gymee.com.br/">
@@ -17,7 +17,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://gymee.com.br/">
   <meta property="og:title" content="GYMEE Corporativo — Garrafas Térmicas Personalizadas para Empresas">
-  <meta property="og:description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Academias, eventos wellness e brindes corporativos.">
+  <meta property="og:description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Mais de 50 marcas — academias, estúdios e eventos wellness — já confiam na GYMEE.">
   <meta property="og:image" content="https://gymee.com.br/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GYMEE Corporativo — Garrafas Térmicas Personalizadas para Empresas">
-  <meta name="twitter:description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Academias, eventos wellness e brindes corporativos.">
+  <meta name="twitter:description" content="Garrafas térmicas premium personalizadas com a logo da sua empresa. Mais de 50 marcas — academias, estúdios e eventos wellness — já confiam na GYMEE.">
   <meta name="twitter:image" content="https://gymee.com.br/assets/og-image.jpg">
 
   <!-- Structured data -->
@@ -37,7 +37,7 @@
     "url": "https://gymee.com.br/",
     "logo": "https://gymee.com.br/assets/logo.png",
     "image": "https://gymee.com.br/assets/og-image.jpg",
-    "description": "Garrafas térmicas premium personalizadas com a logo da sua empresa. Academias, eventos wellness e brindes corporativos.",
+    "description": "Garrafas térmicas premium personalizadas com a logo da sua empresa. Mais de 50 marcas — academias, estúdios e eventos wellness — já confiam na GYMEE.",
     "email": "contato@gymee.com.br",
     "sameAs": [
       "https://instagram.com/gymeebr"
@@ -86,6 +86,10 @@
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
     .logo-white { filter: invert(1) brightness(2); }
+    @keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .partners-track { animation: partners-scroll 24s linear infinite; }
+    .partners-track:hover { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) { .partners-track { animation: none; } }
   </style>
 </head>
 <body class="font-body text-ink bg-sand-50">
@@ -98,6 +102,7 @@
         <span class="hidden sm:inline-block text-[10px] font-semibold tracking-[0.22em] uppercase text-sage-600 border-l border-sage-200 pl-2 ml-1" data-i18n="nav.tag">Corporativo</span>
       </a>
       <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <a href="#parceiros" class="hover:text-sage-600 transition" data-i18n="nav.partners">Parceiros</a>
         <a href="#servicos" class="hover:text-sage-600 transition" data-i18n="nav.services">Soluções</a>
         <a href="#produtos" class="hover:text-sage-600 transition" data-i18n="nav.products">Produtos</a>
         <a href="#depoimentos" class="hover:text-sage-600 transition" data-i18n="nav.reviews">Depoimentos</a>
@@ -113,6 +118,7 @@
     </nav>
     <!-- mobile menu -->
     <div id="mobileMenu" class="lg:hidden hidden bg-sand-50 border-t border-sage-100 px-5 py-4 space-y-1">
+      <a href="#parceiros" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.partners">Parceiros</a>
       <a href="#servicos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.services">Soluções</a>
       <a href="#produtos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.products">Produtos</a>
       <a href="#depoimentos" class="block py-2.5 font-medium text-ink/80" data-i18n="nav.reviews">Depoimentos</a>
@@ -162,6 +168,74 @@
       <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.2">Pedidos a partir de 10 unidades</span></span>
       <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.3">Entrega para todo o Brasil</span></span>
       <span class="flex items-center gap-2"><svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-i18n="trust.4">Condições especiais B2B</span></span>
+    </div>
+  </section>
+
+  <!-- ============ PARTNERS ============ -->
+  <section id="parceiros" class="py-16 lg:py-20 bg-white border-b border-sage-100">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center reveal">
+        <span class="inline-flex items-center gap-2 bg-sage-100 text-sage-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase" data-i18n="partners.badge">🤝 +50 marcas confiam na GYMEE</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mt-4" data-i18n="partners.title">Marcas que já vestem a GYMEE</h2>
+        <p class="mt-3 text-ink/60 text-base leading-relaxed" data-i18n="partners.subtitle">De academias a estúdios e eventos, negócios reais que transformaram hidratação em identidade de marca.</p>
+      </div>
+      <div class="mt-10 reveal relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div class="partners-track flex items-center gap-4 md:gap-5 w-max">
+          <!-- set 1 -->
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-1.jfif" alt="SkyFit Academia" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-2.jfif" alt="Mesa Pizza" width="204" height="204" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-3.png" alt="Grupo Makena" width="300" height="300" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-4.jfif" alt="By Lara Jucah" width="555" height="360" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-5.png" alt="Jprowine" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-6.jfif" alt="STU Skate Total Urbe" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-7.webp" alt="Moinhos Fitness" width="1200" height="628" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm">
+            <img src="assets/academia-8.png" alt="Rio Surf Pro 2026" width="800" height="800" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <!-- set 2 (duplicate for seamless loop) -->
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-1.jfif" alt="" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-2.jfif" alt="" width="204" height="204" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-3.png" alt="" width="300" height="300" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-4.jfif" alt="" width="555" height="360" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-5.png" alt="" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-6.jfif" alt="" width="447" height="447" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-7.webp" alt="" width="1200" height="628" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border border-sage-100 shadow-sm" aria-hidden="true">
+            <img src="assets/academia-8.png" alt="" width="800" height="800" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 text-center reveal">
+        <a href="#contato" class="inline-flex items-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold rounded-full px-6 py-3 transition shadow-sm shadow-sage-600/20" data-i18n="partners.cta">Quero minha marca aqui <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -617,13 +691,17 @@
     // ===== i18n =====
     const i18n = {
       en: {
-        'nav.tag':'Corporate', 'nav.services':'Solutions', 'nav.products':'Products', 'nav.reviews':'Reviews', 'nav.gallery':'Gallery', 'nav.cta':'Get a quote',
+        'nav.tag':'Corporate', 'nav.partners':'Partners', 'nav.services':'Solutions', 'nav.products':'Products', 'nav.reviews':'Reviews', 'nav.gallery':'Gallery', 'nav.cta':'Get a quote',
         'hero.badge':'Premium hydration for your business',
         'hero.title':'Your brand in every sip.',
         'hero.subtitle':'Premium insulated bottles customized with your company logo. The choice of gyms, wellness events and brands that value well-being.',
         'hero.cta1':'Request a quote', 'hero.cta2':'View products',
         'hero.stat1':'cold for up to', 'hero.stat2':'premium stainless steel', 'hero.stat3':'companies served',
         'trust.1':'Laser engraving of your logo', 'trust.2':'Orders from 10 units', 'trust.3':'Delivery across Brazil', 'trust.4':'Special B2B conditions',
+        'partners.badge':'🤝 +50 brands trust GYMEE',
+        'partners.title':'Brands that already wear GYMEE',
+        'partners.subtitle':'Gyms, studios and events — real businesses that turned hydration into brand identity.',
+        'partners.cta':'I want my brand here →',
         'services.kicker':'B2B Solutions', 'services.title':'Made for your business',
         'services.subtitle':'From the gym to the office, we turn hydration into a brand experience.',
         'services.c1.title':'Gyms & Studios',
