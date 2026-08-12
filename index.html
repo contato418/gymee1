@@ -88,7 +88,9 @@
     .logo-white { filter: invert(1) brightness(2); }
     @keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .partners-track { animation: partners-scroll 24s linear infinite; }
-    .partners-track:hover { animation-play-state: paused; }
+    @media (hover: hover) and (pointer: fine) {
+      .partners-track:hover { animation-play-state: paused; }
+    }
     @media (prefers-reduced-motion: reduce) { .partners-track { animation: none; } }
   </style>
 </head>
