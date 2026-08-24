@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garrafinha Personalizada com Nome do Aluno para Escolas e Creches | GYMEE Kids</title>
   <meta name="description" content="Garrafinhas térmicas GYMEE Kids com o nome de cada criança gravado a laser. Ideal para kit de matrícula, material escolar e brindes de escolas e creches. Peça seu orçamento.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gymee.com.br/kids/">
   <link rel="icon" type="image/png" href="../assets/logo.png">
 
@@ -46,6 +47,56 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "GYMEE", "item": "https://gymee.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "GYMEE Kids — Escolas & Creches", "item": "https://gymee.com.br/kids/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual é o pedido mínimo para a GYMEE Kids?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabalhamos com pedidos a partir de 10 unidades, com a gravação do nome de cada aluno inclusa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como enviamos os nomes de cada aluno para gravação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depois de escolher o modelo e as cores, você envia a lista com o nome de cada criança (e a turma, se quiser) e nós organizamos a gravação e a entrega por turma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É possível incluir a logo da escola junto com o nome do aluno?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, é possível incluir a logo da escola gravada a laser junto ao nome de cada criança."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva para receber o orçamento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enviamos uma proposta personalizada em até 24h úteis após o seu contato."
+        }
+      }
+    ]
+  }
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -75,6 +126,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../assets/kids-model1.jpeg" fetchpriority="high">
   <style>
     html { -webkit-font-smoothing: antialiased; }
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
@@ -87,10 +139,10 @@
   <!-- ============ MINI NAVBAR (landing page — no exit links) ============ -->
   <header class="fixed top-0 inset-x-0 z-50 bg-sand-50/90 backdrop-blur-md border-b border-sage-100">
     <nav class="max-w-6xl mx-auto px-5 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-      <div class="flex items-center gap-2">
+      <a href="../" class="flex items-center gap-2">
         <img src="../assets/logo.png" alt="GYMEE" width="360" height="360" class="h-9 md:h-11 w-auto">
         <span class="hidden sm:inline-block text-[10px] font-semibold tracking-[0.22em] uppercase text-sage-600 border-l border-sage-200 pl-2 ml-1">Escolas & Creches</span>
-      </div>
+      </a>
       <a href="#contato" class="inline-flex items-center gap-2 bg-sage-600 hover:bg-sage-700 text-white text-sm font-semibold rounded-full px-5 py-2.5 transition shadow-sm shadow-sage-600/20">Pedir orçamento</a>
     </nav>
   </header>
@@ -98,7 +150,7 @@
   <!-- ============ HERO ============ -->
   <section class="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="../assets/kids-model1.jpeg" alt="Menino sorrindo com garrafinha GYMEE Kids no parquinho da escola" width="960" height="1280" class="w-full h-full object-cover object-[50%_12%]">
+      <img src="../assets/kids-model1.jpeg" alt="Menino sorrindo com garrafinha GYMEE Kids no parquinho da escola" width="960" height="1280" fetchpriority="high" class="w-full h-full object-cover object-[50%_12%]">
       <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/15"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
     </div>
@@ -186,17 +238,17 @@
       <div class="mt-14 reveal bg-sage-800 rounded-3xl p-8 lg:p-12 text-white grid md:grid-cols-3 gap-8">
         <div>
           <span class="font-display text-sage-300 text-sm font-bold">01</span>
-          <h4 class="font-display text-lg font-bold mt-1">Escolha o modelo</h4>
+          <h3 class="font-display text-lg font-bold mt-1">Escolha o modelo</h3>
           <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed">Selecione entre as 5 cores da GYMEE Kids e, se quiser, inclua a logo da escola junto ao nome do aluno.</p>
         </div>
         <div>
           <span class="font-display text-sage-300 text-sm font-bold">02</span>
-          <h4 class="font-display text-lg font-bold mt-1">Envie a lista de alunos</h4>
+          <h3 class="font-display text-lg font-bold mt-1">Envie a lista de alunos</h3>
           <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed">Nos mande o nome de cada criança (e a turma, se preferir) para a gravação individual a laser.</p>
         </div>
         <div>
           <span class="font-display text-sage-300 text-sm font-bold">03</span>
-          <h4 class="font-display text-lg font-bold mt-1">Receba organizado por turma</h4>
+          <h3 class="font-display text-lg font-bold mt-1">Receba organizado por turma</h3>
           <p class="text-sage-200/80 text-sm mt-1.5 leading-relaxed">Entrega para todo o Brasil, pronta para o kit de matrícula ou a volta às aulas.</p>
         </div>
       </div>
@@ -209,7 +261,7 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="reveal bg-sand-50 rounded-3xl overflow-hidden border border-sage-100">
           <div class="aspect-[4/5] bg-white flex items-center justify-center overflow-hidden">
-            <img id="kidsImg" src="../assets/kids-green.jpg" alt="GYMEE Kids" width="1200" height="1200" class="w-full h-full object-cover transition-opacity duration-300">
+            <img id="kidsImg" src="../assets/kids-green.jpg" alt="Garrafinha térmica infantil GYMEE Kids personalizada com o nome da criança" width="1200" height="1200" class="w-full h-full object-cover transition-opacity duration-300">
           </div>
         </div>
         <div class="reveal" style="transition-delay:.1s">
@@ -241,6 +293,46 @@
         <div class="reveal rounded-3xl overflow-hidden group"><img src="../assets/kids-model1.jpeg" alt="Menino com garrafinha GYMEE Kids no parquinho" width="960" height="1280" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
         <div class="reveal rounded-3xl overflow-hidden group"><img src="../assets/kids-model3.jpeg" alt="Criança com garrafinha GYMEE Kids rosa na beira da piscina da escola" width="960" height="1280" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
         <div class="reveal rounded-3xl overflow-hidden group col-span-2 lg:col-span-1"><img src="../assets/kids-model5.jpeg" alt="Criança bebendo água na garrafinha GYMEE Kids" width="960" height="1280" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-700" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-5 lg:px-8">
+      <div class="text-center reveal">
+        <span class="text-sage-600 text-xs font-bold tracking-[0.2em] uppercase">Dúvidas frequentes</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mt-3">Perguntas de escolas e creches</h2>
+      </div>
+      <div class="mt-12 space-y-4">
+        <details class="reveal group bg-sand-50 border border-sage-100 rounded-2xl p-5" open>
+          <summary class="flex items-center justify-between gap-4 font-display font-bold cursor-pointer list-none">
+            <span>Qual é o pedido mínimo para a GYMEE Kids?</span>
+            <svg class="w-5 h-5 text-sage-600 shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-ink/60 text-sm leading-relaxed">Trabalhamos com pedidos a partir de 10 unidades, com a gravação do nome de cada aluno inclusa.</p>
+        </details>
+        <details class="reveal group bg-sand-50 border border-sage-100 rounded-2xl p-5" style="transition-delay:.05s">
+          <summary class="flex items-center justify-between gap-4 font-display font-bold cursor-pointer list-none">
+            <span>Como enviamos os nomes de cada aluno para gravação?</span>
+            <svg class="w-5 h-5 text-sage-600 shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-ink/60 text-sm leading-relaxed">Depois de escolher o modelo e as cores, você envia a lista com o nome de cada criança (e a turma, se quiser) e nós organizamos a gravação e a entrega por turma.</p>
+        </details>
+        <details class="reveal group bg-sand-50 border border-sage-100 rounded-2xl p-5" style="transition-delay:.1s">
+          <summary class="flex items-center justify-between gap-4 font-display font-bold cursor-pointer list-none">
+            <span>É possível incluir a logo da escola junto com o nome do aluno?</span>
+            <svg class="w-5 h-5 text-sage-600 shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-ink/60 text-sm leading-relaxed">Sim, é possível incluir a logo da escola gravada a laser junto ao nome de cada criança.</p>
+        </details>
+        <details class="reveal group bg-sand-50 border border-sage-100 rounded-2xl p-5" style="transition-delay:.15s">
+          <summary class="flex items-center justify-between gap-4 font-display font-bold cursor-pointer list-none">
+            <span>Quanto tempo leva para receber o orçamento?</span>
+            <svg class="w-5 h-5 text-sage-600 shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-ink/60 text-sm leading-relaxed">Enviamos uma proposta personalizada em até 24h úteis após o seu contato.</p>
+        </details>
       </div>
     </div>
   </section>
