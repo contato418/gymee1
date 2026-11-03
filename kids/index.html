@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TW5SC46G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GT-TW5SC46G');
+  </script>
+  <script defer src="../assets/tracking.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garrafinha Personalizada com Nome do Aluno para Escolas e Creches | GYMEE Kids</title>
@@ -473,6 +484,8 @@
       if (msg) text += `\nMensagem: ${msg}`;
       window.open('https://wa.me/5551995252314?text=' + encodeURIComponent(text), '_blank');
       document.getElementById('formOk').classList.remove('hidden');
+      // conversão do formulário (este form não tem campo de telefone)
+      if (typeof window.gymeeTrackFormSuccess === 'function') window.gymeeTrackFormSuccess('');
     });
   </script>
 </body>
